@@ -21,16 +21,16 @@ This class uses the "Get Hand State As Execution" function:
 
 Inputs: 
 
--Target, should go to the Kienct Interface component created
--Hand, Enumerated Hand (Left or Right) if you want, or else it will use either detected
--Body Number, Same Enumerated value, Kinect can track up to 8 body numbers
+Target, should go to the Kienct Interface component created
+Hand, Enumerated Hand (Left or Right) if you want, or else it will use either detected
+Body Number, Same Enumerated value, Kinect can track up to 8 body numbers
 
 Outputs: 
 
--Unknown: Kinect is not confident enough to tell
--Not Tracked:  Kinect is not tracking any hands
--Open:  One hand is in an open state
--Closed:  One hand is in a closed state
--Lasso:  Yee haw cowboy, them be a lasso in your hands!
+Unknown: Kinect is not confident enough to tell
+Not Tracked:  Kinect is not tracking any hands
+Open:  One hand is in an open state
+Closed:  One hand is in a closed state
+Lasso:  Yee haw cowboy, them be a lasso in your hands!
 
 Each of these outputs can lead to event logic, for example, I created OSC Send events from both the Open and Closed states.
