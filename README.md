@@ -20,6 +20,10 @@ The full API of commands is available here:
 
 http://opaquemultimedia.com/index.html?pages/k4u.html&k4u
 
+First, load the level_robot_arms level to demonstrate Kinect arm functionality.
+
+Note!  The computer you are running this demo on MUST have a Kinect v2 attached, or else the demo will crash.  
+
 The BP_Robot_Arms blueprint class works by first instantiating the KinectInterface object, and then calling Get Centered Body from it.
 
 From there, the class calls two functions, LHandTracking and RHandTracking.  Both take a Body Number input and then collect joint data from either the L or R hands, scale the vector, rotate it, and set a relative location to the actor objects (Actor SM_spheres).   
