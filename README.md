@@ -20,32 +20,10 @@ The full API of commands is available here:
 
 http://opaquemultimedia.com/index.html?pages/k4u.html&k4u
 
-A sample blueprint BP_Introduction_Bones3D.uasset shows how bone joint recognition works:
+The BP_Robot_Arms blueprint class works by first instantiating the KinectInterface object, and then calling Get Centered Body from it.
 
-```
+From there, the class calls two functions, LHandTracking and RHandTracking.  Both take a Body Number input and then collect joint data from either the L or R hands, scale the vector, rotate it, and set a relative location to the actor objects (Actor SM_spheres).   
 
-This class uses the "Get Hand State As Execution" function
+Future functionality will include adding other static meshes for hands, adding leap finger support to hands, adapting the actor class to an pawn class, and tweaking movement.  
 
-Inputs: 
-
-Target, should go to the Kienct Interface component created
-
-Hand, Enumerated Hand (Left or Right) if you want, or else it will use either detected
-
-Body Number, Same Enumerated value, Kinect can track up to 8 body numbers
-
-Outputs: 
-
-Unknown: Kinect is not confident enough to tell
-
-Not Tracked:  Kinect is not tracking any hands
-
-Open:  One hand is in an open state
-
-Closed:  One hand is in a closed state
-
-Lasso:  Yee haw cowboy, them be a lasso in your hands!
-
-Each of these outputs can lead to event logic, for example, I created OSC Send events from both the Open and Closed states.
-
-```
+Currently, the demo has physics enabled with falling space debris to demonstrate the functionality of the robot hands.
