@@ -1,0 +1,14 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.6",
+	"Category": "",
+	"Description": "",
+	"Plugins": [
+		{
+			"Name": "Kinect4Unreal",
+			"Enabled": true,
+			"Description": "Please download the Kinect 4 Unreal plugin and place it in the 'Plugins' folder to run this project. Visit http://opaquemultimedia.com/index.html?pages/k4u.html&k4u
+ for more information."
+		}
+	]
+}
